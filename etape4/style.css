@@ -1,0 +1,52 @@
+/* Conteneur : tableau centré + police globale Calibri en première police */
+#table_container {
+	width: 720px;
+	margin: 40px auto;
+	font-family: Calibri, "Segoe UI", Arial, sans-serif;
+	font-size: 14px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th {
+	background-color: #0b7bb5;
+	color: #ffffff;
+	padding: 8px;
+}
+
+td {
+	padding: 8px;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+/* Classes des colonnes */
+.col_number {
+	width: 60px;
+	text-align: center;
+}
+
+.col_text {
+	text-align: left;
+}
+
+.col_chkbox {
+	width: 90px;
+	text-align: center;
+}
+
+/* Espace résumé : bande grise, nombre de lignes à gauche, total à droite */
+#container_summary {
+	display: flex;
+	justify-content: space-between;
+	background-color: #f2f2f2;
+	padding: 6px 10px;
+	font-size: 13px;
+	color: #444444;
+}
+
+#container_summary p {
+	margin: 0;
+}

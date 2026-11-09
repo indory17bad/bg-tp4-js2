@@ -1,7 +1,7 @@
 "use strict"; // Mode strict : première instruction du fichier (vu dans le slide __)
 
 // Fonction qui insère une ligne dans le tableau (vu dans le slide __)
-function doInsertRowTable(num, nom, prenom, points) {
+function doInsertRowTable(num, Name, preName, points) {
     // Récupérer l'élément tableau grâce à son identifiant (vu dans le slide __)
     const table = document.getElementById("table_persons");
 
@@ -20,8 +20,8 @@ function doInsertRowTable(num, nom, prenom, points) {
 
     // Remplir le contenu de chaque colonne avec les paramètres, via innerText (vu dans le slide __)
     col1.innerText = num;
-    col2.innerText = nom;
-    col3.innerText = prenom;
+    col2.innerText = Name;
+    col3.innerText = preName;
     col4.innerText = points;
 
     // La dernière colonne contient un élément input de type checkbox (vu dans le slide __)

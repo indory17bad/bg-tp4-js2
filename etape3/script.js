@@ -1,17 +1,17 @@
 "use strict"; // Mode strict : première instruction du fichier (vu dans le slide __)
 
-// Tableau d'objets "persons" : chaque objet a un nom, un prénom et des points (vu dans le slide __)
+// Tableau d'objets "persons" : chaque objet a un Name, un préName et des points (vu dans le slide __)
 const persons = [
-    { nom: "nom-1", prenom: "prenom-1", points: 5 },
-    { nom: "nom-2", prenom: "prenom-2", points: 10 },
-    { nom: "nom-3", prenom: "prenom-3", points: 15 }
+    { Name: "Name-1", preName: "preName-1", points: 5 },
+    { Name: "Name-2", preName: "preName-2", points: 10 },
+    { Name: "Name-3", preName: "preName-3", points: 15 }
 ];
 
 // Compteur du nombre de lignes insérées, initialisé à 0 (vu dans le slide __)
 let lignes = 0;
 
 // Fonction qui insère une ligne dans le tableau (vu dans le slide __)
-function doInsertRowTable(num, nom, prenom, points) {
+function doInsertRowTable(num, Name, preName, points) {
     // Récupérer l'élément tableau grâce à son identifiant (vu dans le slide __)
     const table = document.getElementById("table_persons");
 
@@ -30,8 +30,8 @@ function doInsertRowTable(num, nom, prenom, points) {
 
     // Remplir le contenu de chaque colonne avec les paramètres, via innerText (vu dans le slide __)
     col1.innerText = num;
-    col2.innerText = nom;
-    col3.innerText = prenom;
+    col2.innerText = Name;
+    col3.innerText = preName;
     col4.innerText = points;
 
     // La dernière colonne contient un élément input de type checkbox (vu dans le slide __)
@@ -54,16 +54,16 @@ function doInsertRowTable(num, nom, prenom, points) {
 }
 
 // Insère une personne : incrémente le compteur lignes et l'utilise comme numéro (vu dans le slide __)
-function doInsert(nom, prenom, points) {
+function doInsert(Name, preName, points) {
     lignes++; // Incrémentation du compteur (vu dans le slide __)
-    doInsertRowTable(lignes, nom, prenom, points);
+    doInsertRowTable(lignes, Name, preName, points);
 }
 
 // Parcourt le tableau persons et insère chaque personne dans le tableau HTML (vu dans le slide __)
 function init() {
     // Boucle for..of pour parcourir les objets de persons (vu dans le slide __)
     for (const person of persons) {
-        doInsert(person.nom, person.prenom, person.points);
+        doInsert(person.Name, person.preName, person.points);
     }
 }
 

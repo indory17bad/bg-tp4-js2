@@ -1,4 +1,4 @@
-/* Conteneur : tableau centré + police globale Calibri en première police */
+/* Container: centered table + global font set to Calibri as the primary font */
 #table_container {
 	width: 720px;
 	margin: 40px auto;
@@ -22,7 +22,7 @@ td {
 	border-bottom: 1px solid #e3e3e3;
 }
 
-/* Classes des colonnes */
+/* Classes of colonnes */
 .col_number {
 	width: 60px;
 	text-align: center;

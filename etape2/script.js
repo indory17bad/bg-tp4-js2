@@ -1,44 +1,44 @@
-"use strict"; // Mode strict : première instruction du fichier (vu dans le slide __)
+"use strict"; // Strict mode: first statement of the file 
 
-// Fonction qui insère une ligne dans le tableau (vu dans le slide __)
-function doInsertRowTable(num, Name, preName, points) {
-    // Récupérer l'élément tableau grâce à son identifiant (vu dans le slide __)
+// Function that inserts a row into the table
+function doInsertRowTable(num, Name, firstName, points) {
+    // Retrieve the table element using its ID
     const table = document.getElementById("table_persons");
 
-    // Créer un élément de type tr (ligne de tableau) (vu dans le slide __)
+    // Create an element of type tr (table row)
     const row = document.createElement("tr");
 
-    // Affecter la valeur "row" à l'attribut "class" avec setAttribute (vu dans le slide __)
+    // Assign the value "row" to the "class" attribute using setAttribute
     row.setAttribute("class", "row");
 
-    // Créer 5 éléments de type td (colonnes du tableau) (vu dans le slide __)
+    // Create 5 elements of type td (table columns)
     const col1 = document.createElement("td");
     const col2 = document.createElement("td");
     const col3 = document.createElement("td");
     const col4 = document.createElement("td");
     const col5 = document.createElement("td");
 
-    // Remplir le contenu de chaque colonne avec les paramètres, via innerText (vu dans le slide __)
+    // Fill the content of each column with the parameters using innerText
     col1.innerText = num;
     col2.innerText = Name;
-    col3.innerText = preName;
+    col3.innerText = firstName;
     col4.innerText = points;
 
-    // La dernière colonne contient un élément input de type checkbox (vu dans le slide __)
+    // The last column contains an input element of type checkbox
     const checkbox = document.createElement("input");
     checkbox.setAttribute("type", "checkbox");
     col5.append(checkbox);
 
-    // Affecter les classes correspondantes à chaque colonne (vu dans le slide __)
+    // Assign the corresponding classes to each column
     col1.setAttribute("class", "col_number");
     col2.setAttribute("class", "col_text");
     col3.setAttribute("class", "col_text");
     col4.setAttribute("class", "col_number");
     col5.setAttribute("class", "col_chkbox");
 
-    // Rajouter les colonnes à la ligne avec la méthode append() (vu dans le slide __)
+    // Add the columns to the row using the append() method
     row.append(col1, col2, col3, col4, col5);
 
-    // Rajouter la ligne au tableau (vu dans le slide __)
+    // Add the row to the table
     table.append(row);
 }

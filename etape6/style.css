@@ -1,0 +1,116 @@
+/* Container: centered table + global font set to Calibri as the primary font */
+#table_container {
+	width: 720px;
+	margin: 40px auto;
+	font-family: Calibri, "Segoe UI", Arial, sans-serif;
+	font-size: 14px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th {
+	background-color: #0b7bb5;
+	color: #ffffff;
+	padding: 8px;
+}
+
+td {
+	padding: 8px;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+/* Classes of colonnes */
+.col_number {
+	width: 60px;
+	text-align: center;
+}
+
+.col_text {
+	text-align: left;
+}
+
+.col_chkbox {
+	width: 90px;
+	text-align: center;
+}
+
+/* Summary section: gray bar, row count on the left, total on the right */
+#container_summary {
+	display: flex;
+	justify-content: space-between;
+	background-color: #f2f2f2;
+	padding: 6px 10px;
+	font-size: 13px;
+	color: #444444;
+}
+
+#container_summary p {
+	margin: 0;
+}
+
+/* Data Entry Form */
+#form_container {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	margin-bottom: 12px;
+	font-size: 13px;
+}
+
+.form_group {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.form_label {
+	font-weight: bold;
+}
+
+.form_field {
+	width: 130px;
+	padding: 4px 6px;
+	border: 1px solid #bbbbbb;
+	border-radius: 3px;
+}
+
+/* Boutons */
+button {
+	padding: 6px 12px;
+	border: none;
+	border-radius: 3px;
+	color: #ffffff;
+	font-family: inherit;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+button:hover {
+	opacity: 0.9;
+}
+
+.btn-add {
+	background-color: #16a34a;
+}
+
+.btn-del {
+	background-color: #e11d1d;
+}
+
+.btn-consol {
+	background-color: #b8860b;
+}
+
+.btn-sort {
+	background-color: #0b7bb5;
+}
+
+#container_btn {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	margin-top: 12px;
+}

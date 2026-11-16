@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>People Manager</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="card" id="table_container">
+
+		<header class="card_header">
+			<div>
+				<h1>People Manager</h1>
+				<p class="subtitle">Add, edit, search, sort and export your list.</p>
+			</div>
+			<span class="badge" id="badge_count">0 people</span>
+		</header>
+
+		<!-- Add form -->
+		<form id="form_container" autocomplete="off">
+			<div class="form_group">
+				<label class="form_label" for="form_lastName">Last name</label>
+				<input type="text" id="form_lastName" class="form_field" placeholder="e.g. Smith">
+			</div>
+			<div class="form_group">
+				<label class="form_label" for="form_firstName">First name</label>
+				<input type="text" id="form_firstName" class="form_field" placeholder="e.g. Anna">
+			</div>
+			<div class="form_group form_group_small">
+				<label class="form_label" for="form_points">Points</label>
+				<input type="number" id="form_points" class="form_field" placeholder="0">
+			</div>
+			<button type="submit" class="btn btn-add">+ Add</button>
+		</form>
+		<p id="form_error" class="form_error" role="alert"></p>
+
+		<!-- Toolbar -->
+		<div class="toolbar">
+			<input type="search" id="search" class="form_field search" placeholder="Search by name…">
+			<div class="toolbar_buttons">
+				<button class="btn btn-ghost" id="btn_export">Export CSV</button>
+				<button class="btn btn-ghost" id="btn_console">Log to console</button>
+				<button class="btn btn-ghost" id="btn_clear">Clear all</button>
+				<button class="btn btn-del" id="btn_delete">Delete selected</button>
+			</div>
+		</div>
+
+		<!-- Table -->
+		<div class="table_wrap">
+			<table id="table_persons">
+				<thead>
+					<tr>
+						<th class="col_number">#</th>
+						<th class="col_text sortable" data-sort="lastName">Last name <span class="arrow"></span></th>
+						<th class="col_text sortable" data-sort="firstName">First name <span class="arrow"></span></th>
+						<th class="col_number sortable" data-sort="points">Points <span class="arrow"></span></th>
+						<th class="col_chkbox"><input type="checkbox" id="select_all" title="Select all visible rows"></th>
+						<th class="col_actions">Actions</th>
+					</tr>
+				</thead>
+				<tbody id="table_body"></tbody>
+			</table>
+		</div>
+
+		<!-- Summary -->
+		<div id="container_summary">
+			<div class="stat"><span class="stat_label">Rows</span><span class="stat_value" id="p1">0</span></div>
+			<div class="stat"><span class="stat_label">Total points</span><span class="stat_value" id="p3">0</span></div>
+			<div class="stat"><span class="stat_label">Average</span><span class="stat_value" id="p2">–</span></div>
+			<div class="stat"><span class="stat_label">Highest</span><span class="stat_value" id="p4">–</span></div>
+			<div class="stat"><span class="stat_label">Lowest</span><span class="stat_value" id="p5">–</span></div>
+		</div>
+	</main>
+
+	<div id="toast" class="toast" role="status"></div>
+	<script src="script.js"></script>
+</body>
+</html>
